@@ -6,7 +6,7 @@ namespace Bai_2
 	{
 		public static void Main(string[] args)
 		{
-			bool flag = false;
+			bool flag;
 			int th, k;
 			string plaintext, ciphertext, kq;
 			// Hỗ trợ Unicode
@@ -30,7 +30,6 @@ namespace Bai_2
 					Console.Write("Lỗi. Chọn lại: ");
 					flag = int.TryParse(Console.ReadLine(), out th);
 				}
-				flag = false;
 				switch (th)
 				{
 					case 1:
@@ -41,7 +40,6 @@ namespace Bai_2
 							Console.Write("0 <= k <= 25. Chọn lại giá trị khóa: ");
 							flag = int.TryParse(Console.ReadLine(), out k);
 						}
-						flag = false;
 						Console.Write("Nhập đoạn văn cần mã hóa: ");
 						plaintext = Console.ReadLine();
 						if (plaintext == "")
@@ -62,7 +60,6 @@ namespace Bai_2
 							Console.Write("0 <= k <= 25. Chọn lại giá trị khóa: ");
 							flag = int.TryParse(Console.ReadLine(), out k);
 						}
-						flag = false;
 						Console.Write("Nhập đoạn văn cần giải mã: ");
 						ciphertext = Console.ReadLine();
 						if (ciphertext == "")
@@ -178,7 +175,10 @@ namespace Bai_2
 						rs = rs + plainText;
 					}
 				}
-				Console.WriteLine("Kết quả khi k = " + k + " : " + rs);
+				Console.ForegroundColor = ConsoleColor.Green;
+				Console.Write("Kết quả khi k = " + k + " : ");
+				Console.ForegroundColor = ConsoleColor.White;
+				Console.WriteLine(rs);
 				rs = "";
 			}
 		}

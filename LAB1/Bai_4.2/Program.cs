@@ -8,7 +8,7 @@ namespace Bai_4._2
 		{
 			Console.InputEncoding = Encoding.UTF8;
 			string key, cypherText, plainText, result;
-			bool flag = false;
+			bool flag;
 			int th;
 			Console.OutputEncoding = Encoding.UTF8;
 			char[,] maTranPlayFair = new char[5, 5];
@@ -43,7 +43,6 @@ namespace Bai_4._2
 					Console.Write("Lỗi. Chọn lại: ");
 					flag = int.TryParse(Console.ReadLine(), out th);
 				}
-				flag = false;
 				switch (th)
 				{
 					case 1:

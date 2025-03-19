@@ -11,7 +11,6 @@ namespace Bai_4._1
 			Console.OutputEncoding = Encoding.UTF8;
 			char[,] maTranPlayFair = new char[5, 5];
 			string key = "Harry Potter";
-			string th = "ABSC";
 			string cipherText = "ARYWYPHCBVEBYGMPNCYGCNTDNCWTMGRMFTQPLEWTMLREFBEBQEBIYGBFLPHVOAEHKDHEUNGQFEROLEWTMLOPHEQGOSBEROQDWTLCMTHBWLNRKXRYLORYYPHCBVEBYRLGYDMKYGGWKLROANDBWGNERMNGYRLGHEWRTRLMBRHMUDGVODVTEGMCHLGWCMTFODNRRYCMZKODDUTDXGEOPOYRMFRMGUKXRYGHABROVTGQMCEHPRPEOTSEGEQLARYWYPOTMGQDOEXGOAUDHGUTULTNEHFTFHPGXGVPHGURBDMEGWKLETCBOTNTFQLTAEHMTUGEOAHEVEROXGVPHGDEWTEWGQIEDLPILERWPMOATNGQKQEAHBMVRFKBRMKLXODXFREBHMNUKXRYKLRMFLWDDNCN";
 			key = key.ToUpper().Replace(" ", "");
 			maTranPlayFair = TaoMaTranKhoa(maTranPlayFair, key);
@@ -27,7 +26,7 @@ namespace Bai_4._1
 
 			// Giải mã
 			string plainText = GiaiMa(cipherText, maTranPlayFair);
-			Console.WriteLine("Đoạn mã sau khi giải là: " + plainText);
+			Console.WriteLine("Đoạn mã sau khi giải là: " + plainText); *
 		}
 
 		public static char[,] TaoMaTranKhoa(char[,] matran, string key)
