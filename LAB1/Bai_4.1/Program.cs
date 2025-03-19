@@ -26,7 +26,7 @@ namespace Bai_4._1
 
 			// Giải mã
 			string plainText = GiaiMa(cipherText, maTranPlayFair);
-			Console.WriteLine("Đoạn mã sau khi giải là: " + plainText); *
+			Console.WriteLine("Đoạn mã sau khi giải là: " + plainText);
 		}
 
 		public static char[,] TaoMaTranKhoa(char[,] matran, string key)
